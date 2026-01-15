@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import {url} from "node:inspector";
 
 export default {
   content: [
@@ -9,9 +10,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#000000",
+        foreground: "#333333",
+        text: "#CCCCCC",
+        buttons: "#666666",
+        clickies: "#999999"
       },
+      backgroundImage:{
+        'mountains': "url('../public/images/mountains.jpg')",
+        'ocean': "url('../public/images/ocean.jpg')"
+      },
+      fontFamily:{
+        roboto:["Roboto Mono", "sans-serif"]
+
+      }
     },
   },
   plugins: [],
