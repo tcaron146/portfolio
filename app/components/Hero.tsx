@@ -13,6 +13,7 @@ interface Project {
   description: string;
   image: StaticImageData;
   link: string;
+  github?: string;
 }
 
 export default function Hero() {
@@ -26,6 +27,7 @@ export default function Hero() {
         "GIS-based steep ski-mapping demo built with Next.js, React Leaflet, custom GeoJSON layers, and detailed route metadata.",
       image: onx,
       link: "https://tcaron146.github.io/onX-east-coast",
+      github: "https://github.com/tcaron146/onX-east-coast",
     },
     {
       title: "Food Blog Website",
@@ -33,13 +35,14 @@ export default function Hero() {
         "A responsive food blog website built with Next.JS, Firebase, Tailwind, ReactJS, and more.",
       image: burger,
       link: "https://soupdejourtommy-ba24e.web.app/",
+      github: "https://github.com/tcaron146/soupdejourtommy",
     },
   ];
 
   return (
     <div className="bg-background w-screen min-h-screen">
       {/* ---------------------- Header ---------------------- */}
-      <header className="fixed drop-shadow-2xl top-0 left-0 w-full h-16 bg-background text-text font-roboto flex items-center justify-between px-8 shadow-md z-50">
+      <header className="fixed drop-shadow-2xl top-0 left-0 w-full h-20 bg-background text-text font-roboto flex items-center justify-between px-8 shadow-md z-50">
         <h1 className="text-3xl">Tom Caron</h1>
         <nav className="text-lg space-x-6 flex items-center">
           <a href="#about" className="hover:text-accent">
@@ -96,38 +99,64 @@ export default function Hero() {
         <section id="about" className="bg-background text-white py-16">
           <Blurb
             title="About Me"
-            blurb="I'm Tom Caron, a recent Computer Science graduate from Montana State University with a strong foundation in Data Structures & Algorithms, Web Development, and Front-End Develpoment. I thrive in fast-paced, productive environments and am actively seeking software engineering and web development opportunities where I can build impactful solutions. My leadership experience as vice president of my fraternity reinforced my love for collaborative teamwork and goal-oriented projects. When I'm not coding, you'll find me exploring the outdoors. I'm driven to continuously learn, grow, and advance my career alongside a team that shares my commitment to excellence and innovation."
-          />
-        </section>
-
-        {/* ---------------------- Parallax Section 2 ---------------------- */}
-        <div className="parallax bg-ocean bg-cover bg-center h-screen text-white flex items-center justify-center">
-          <h2 className="text-4xl text-background font-roboto font-bold">
-            Explore My Work
-          </h2>
-        </div>
-
-        {/* ---------------------- Projects Section ---------------------- */}
-        <section id="projects" className="bg-black text-white py-16">
-          <Blurb
-            title="Projects"
-            blurb="These are some of my favorite projects that have utilized a plethora of my favorite frameworks, libraries, and algorithms to create and display some really cool apps and sites as well as do some pretty awesome things within programs."
+            blurb="I'm Tom Caron, a recent Computer Science graduate from Montana State University with a strong foundation in Data Structures & Algorithms, Web Development, and Front-End Development. I thrive in fast-paced, productive environments and am actively seeking software engineering and web development opportunities where I can build impactful solutions. My leadership experience as vice president of my fraternity reinforced my love for collaborative teamwork and goal-oriented projects. When I'm not coding, you'll find me exploring the outdoors. I'm driven to continuously learn, grow, and advance my career alongside a team that shares my commitment to excellence and innovation."
           />
 
-          {/* Project Cards Grid */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-            {projectList.map((p, i) => (
-              <ProjectCard
-                key={i}
-                title={p.title}
-                description={p.description}
-                image={p.image}
-                link={p.link}
+          {/* Resume Download Button */}
+          <div className="flex justify-center mt-8">
+
+            <a
+              href="Resume.pdf"
+              download
+              className="bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors flex items-center gap-2"
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
               />
-            ))}
-          </div>
-        </section>
+            </svg>
+            Download Resume
+          </a>
       </div>
+    </section>
+
+        {/* ---------------------- Parallax Section 2 ---------------------- */ }
+  <div className="parallax bg-ocean bg-cover bg-center h-screen text-white flex items-center justify-center">
+    <h2 className="text-4xl text-background font-roboto font-bold">
+      Explore My Work
+    </h2>
+  </div>
+
+  {/* ---------------------- Projects Section ---------------------- */ }
+  <section id="projects" className="bg-black text-white py-16">
+    <Blurb
+      title="Projects"
+      blurb="Here are some projects I've built that combine my technical skills with my interests. From outdoor adventure mapping to web applications, each project represents a challenge I've tackled and a skill I've developed."
+    />
+
+    {/* Project Cards Grid */}
+    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-6 max-w-5xl mx-auto">
+      {projectList.map((p, i) => (
+        <ProjectCard
+          key={i}
+          title={p.title}
+          description={p.description}
+          image={p.image}
+          link={p.link}
+        />
+      ))}
     </div>
+  </section>
+      </div >
+    </div >
   );
 }
