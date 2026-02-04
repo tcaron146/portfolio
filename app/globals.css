@@ -16,6 +16,14 @@
   background-position: center;
 }
 
+.bg-mountains {
+  background-image: url('/images/mountains.jpg');
+}
+
+.bg-ocean {
+  background-image: url('/images/ocean.jpg');
+}
+
 :root {
   --background: #000000;
   --foreground: #171717;
@@ -26,5 +34,4 @@
     --background: #000000;
     --foreground: #ededed;
   }
-
 }
