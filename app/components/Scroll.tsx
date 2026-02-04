@@ -1,14 +1,10 @@
 import React from "react";
 
 interface ScrollProps {
-  images: any[]; // or define a proper type if you know the structure
+  images?: { src: string; alt: string }[]; // Made it optional with proper type
 }
 
 export default function Scroll({ images }: ScrollProps) {
-  // Since images isn't being used, you can either use it or remove the prop
-  // For now, I'll add a comment to acknowledge it
-  console.log(images); // Remove this after you decide what to do with images
-  
   return (
     <div className="flex min-h-screen items-center bg-background">
       <div className="container mx-auto space-y-6">
