@@ -24,7 +24,7 @@ export default function Hero() {
     {
       title: "onX East Coast Ski Mapping",
       description:
-        "GIS-based steep ski-mapping demo built with Next.js, React Leaflet, custom GeoJSON layers, and detailed route metadata.",
+        "GIS-based steep ski-mapping demo built with Mapbox GL JS, Custom GeoJSON data, Python DEM Processing ,Hillshade overlays, Draw Tools, OnX-inspired UX.",
       image: onx,
       link: "https://tcaron146.github.io/onX-east-coast",
       github: "https://github.com/tcaron146/onX-east-coast",
