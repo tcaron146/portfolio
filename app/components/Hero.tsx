@@ -76,7 +76,7 @@ export default function Hero() {
         <section id="about" className="bg-background text-white py-16">
           <Blurb
             title="About Me"
-            blurb="My name is Tom Caron, I am a recent graduate of Montana State University with a bachelors degree in Computer Science who possesses a thorough understanding of concepts in Data Structures in Algorithms, Databases, Web Development, and Discrete Mathematics. My current goal is to start a career in software engineering/development whether it be front-end, back-end, or full-stack. I have experience in leadership roles such as vice president in my fraternity, and through that experience I have grown to love working in a team and working towards a goal collectively. I hope to soon be working with a team of like minded individuals who are all striving to achieve a common goal."
+            blurb="I'm Tom Caron, a recent Computer Science graduate from Montana State University with a strong foundation in Data Structures & Algorithms, Web Development, and Front-End Develpoment. I thrive in fast-paced, productive environments and am actively seeking software engineering and web development opportunities where I can build impactful solutions. My leadership experience as vice president of my fraternity reinforced my love for collaborative teamwork and goal-oriented projects. When I'm not coding, you'll find me exploring the outdoors. I'm driven to continuously learn, grow, and advance my career alongside a team that shares my commitment to excellence and innovation."
           />
         </section>
 
