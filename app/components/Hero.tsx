@@ -34,7 +34,7 @@ export default function Hero() {
       description:
         "A responsive food blog website built with Next.JS, Firebase, Tailwind, ReactJS, and more.",
       image: burger,
-      link: "https://soupdejourtommy-ba24e.web.app/",
+      link: "https://soupdejourtommy.app/",
       github: "https://github.com/tcaron146/soupdejourtommy",
     },
   ];
